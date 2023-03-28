@@ -1,0 +1,69 @@
+
+  <div class="container">
+    <br>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item ">
+          <a class="page-link" href="/userhome/addpassenger">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="/userhome/addpassenger">1</a></li>
+        <li class="page-item"><a class="page-link" href="/userhome/addnewbooking">2</a></li>
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+        </li>
+      </ul>
+    </nav>
+    <br>
+    <div class="row">
+      <h1 class="text-center">Add Booking details</h1>
+    </div>
+    <div class="row card col-md-6 bg-light">
+      <div class="card-body">
+
+        <form >
+
+          <!--<div class="mb-2">
+            <input type="text" placeholder="enter name" id="username" name="username" [(ngModel)]="bkl.username"
+              class="form-control">
+          </div>-->
+
+        
+
+          <div class="mb-2">
+            <input type="text" placeholder="enter source" id="source" name="source" [(ngModel)]="bkl.source"
+              class="form-control" #source>
+              <br>
+              <button class="btn btn-success" (click)="loadRoutes(source.value)">Set Source</button>
+          </div>
+          <div class="mb-2">
+            <select [(ngModel)]="routeName" #routename>
+              <option placeholder="Destination" *ngFor="let route of busroutes" value="{{route.routeName}}">{{route.destination}}</option>
+            </select>
+              <input type="text" placeholder="enter bus number" id="busNumber" name="busNumber" [(ngModel)]="bkl.busNumber"
+                class="form-control" #busnumber>
+            <input type="number" placeholder="enter number of seats" id="numberOfSeats" name="numberOfSeats"
+              [(ngModel)]="bkl.numberOfSeats" class="form-control" #seats>
+            <br>
+            <button class="btn btn-success" (click)="findFare(bkl.numberOfSeats,routename.value,busnumber.value)">Calculate Fare</button>
+            <a style="padding: 20px;">{{fare}}</a>
+          </div>
+          <div class="mb-2">
+            <input type="date" placeholder="enter date of travel" id="datenm" name="datenm" [(ngModel)]="bkl.datenm"
+              class="form-control">
+          </div>
+          <!-- <div> for user id n passenger id
+          <input type="text" placeholder="enter busNumber" id="busNumber" name="busNumber" [(ngModel)]="bkl.busNumber"   class="form-control" >
+          </div> -->
+
+          <br>
+          <div>
+            <button (click)="addBooking()" class="btn btn-success" routerLink="/userhome/printbooking">Book</button>
+          </div>
+        </form>
+        
+
+      </div>
+    </div>
+  </div>
+
+

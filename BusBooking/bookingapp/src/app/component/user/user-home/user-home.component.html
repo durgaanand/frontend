@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online bus booking</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav nav-pills">
+      <nav class="col-md-12 row p-3" style="background-color: #7f5a83;
+      background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+      ">
+        <a class="nav-item nav-link " routerLink="addpassenger" routerLinkActive="active" style="color:white;">New
+          Booking</a>
+        <a class="nav-item nav-link " routerLink="bookinghome" routerLinkActive="active" style="color:white;">Track
+          Booking</a>
+        <a class="nav-item nav-link " routerLink="updatebooking" routerLinkActive="active" style="color:white;">Update
+          Booking</a>
+        <a class="nav-item nav-link " routerLink="feedbackhome" routerLinkActive="active"
+          style="color:white;">Feedback</a>
+        <div class="d-flex justify-content-end">
+          <a class="nav-item nav-link " routerLink="updateuser" routerLinkActive="active" style="color:white;">Account
+            Settings</a>
+          <a class="nav-item nav-link " routerLink="/home" routerLinkActive="active" style="color:white;">Log out</a>
+          <a class="nav-item nav-link " routerLink="deleteuser" routerLinkActive="active" style="color:white;">Delete
+            Account</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+</body>
+<router-outlet></router-outlet>
+
+</html>

@@ -1,0 +1,27 @@
+
+<div class="container">
+  <br>
+  <div class="row">
+    <h1>Enter the details</h1>
+  </div>
+  <br>
+  <div class="row card col-md-6 bg-light">
+    <div class="card-body ">
+      <form #frm="ngForm" (ngSubmit)="updateBusRoute()">
+        <div>
+          <input type="text" placeholder="Bus Route Id" id="busroute" name="busroute" [(ngModel)]="busroutes.busrouteId"
+            #busroute="ngModel" class="form-control" required>
+        </div>
+        <br>
+        <div>
+          <input type="text" placeholder="New Bus Routename" id="routename" name="routename"
+            [(ngModel)]="busroutes.routeName" #routename="ngModel" class="form-control" required>
+        </div>
+        <br>
+        <div>
+          <input type="submit" value="Update Changes" [disabled]="!frm.valid" class="btn btn-success">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

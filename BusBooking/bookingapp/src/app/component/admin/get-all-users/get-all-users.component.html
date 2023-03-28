@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <br>
+    <h1>
+        List Of Users
+    </h1>
+    <br>
+      <table class="table table-bordered">
+         <thead class="thead-light">
+            <tr>
+                <th>user Id</th>
+                <th>Username</th>
+                <th colspan="2">Operations</th>
+            </tr>
+         </thead>
+            <tr *ngFor="let usl of userList">
+                <td>{{ usl.userId}}</td>
+                <td>{{ usl.username }}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-danger" (click)="deleteUser(usl.userId)"> DELETE </button>
+                  </td>
+            </tr>
+      </table>
+    
+    
+</div>

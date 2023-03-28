@@ -1,0 +1,21 @@
+
+<div class="col-md-6">
+  <form   #frm="ngForm" (ngSubmit)="updateUser()">
+    <!--<div>
+    <input type="text" placeholder="enter username" id="username" name="username" [(ngModel)]="users.username" #username="ngModel" class="form-control" required>
+      </div>
+      <div [hidden]="username.valid || username.pristine">
+        <div class="alert alert-danger" [hidden]="!username.hasError('required')">not empty</div>
+       </div>-->
+       <div>
+        <input type="text" placeholder="enter new password" id="password" name="password" [(ngModel)]="users.password" #password="ngModel" class="form-control" required>
+      </div>
+      <div [hidden]="password.valid || password.pristine">
+        <div class="alert alert-danger" [hidden]="!password.hasError('required')">not empty</div>
+       </div>
+       
+       <div>
+        <input type="submit" value="Update Password"  [disabled]="!frm.valid"  class="btn btn-success">
+      </div>
+      </form>
+</div>

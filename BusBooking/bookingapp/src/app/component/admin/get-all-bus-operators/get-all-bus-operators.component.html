@@ -1,0 +1,26 @@
+
+<div class="container">
+    <br>
+    <h1>
+        List Of Bus Operators
+    </h1>
+    <br>
+      <table class="table table-bordered">
+         <thead class="thead-light">
+            <tr>
+                <th>Operator Id</th>
+                <th>Username</th>
+                <th>Operation</th>
+            </tr>
+         </thead>
+            <tr *ngFor="let bopl of operatorList">
+                <td>{{ bopl.busopeartorId }}</td>
+                <td>{{ bopl.busOperatorUsername }}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-danger" (click)="deleteBusOperator(bopl.busOperatorUsername)"> DELETE </button>
+                  </td>
+            </tr>
+      </table>
+    
+    
+</div>

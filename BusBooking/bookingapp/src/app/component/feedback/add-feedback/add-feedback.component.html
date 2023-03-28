@@ -1,0 +1,49 @@
+
+
+<body>
+  
+
+    <div class="col-md-6 m-3">
+      <h2 class="text-center">Give your Feedback</h2>
+      <form #frm="ngForm" (ngSubmit)="addFeedback()">
+
+        <div class="mb-2 p-2">
+          <input type="number" placeholder="User Id" id="userid" name="userid" [(ngModel)]="feedback.userId"
+            #userid="ngModel" class="form-control" required>
+        </div>
+        <div class="alert alert-danger" *ngIf="userid.invalid&&userid.touched">User Id Required</div>
+
+        <div class="mb-2 p-2">
+          <input type="text" placeholder="Username" id="username" name="username" [(ngModel)]="feedback.username"
+            #username="ngModel" class="form-control" required>
+        </div>
+        <div class="alert alert-danger" *ngIf="username.invalid&&username.touched">Username required</div>
+
+        <div class="mb-2 p-2">
+          <input type="number" placeholder="Ratings" id="rating" name="rating" [(ngModel)]="feedback.ratings"
+            #rating="ngModel" class="form-control" required>
+        </div>
+        <div class="alert alert-danger" *ngIf="rating.invalid&&rating.touched">Rating required</div>
+
+        <div class="mb-2 p-2">
+          <input type="text" placeholder="Comments" id="comments" name="comments" [(ngModel)]="feedback.comments"
+            #comments="ngModel" class="form-control">
+        </div>
+
+        <div class="mb-2 p-2">
+          <input type="text" placeholder="Route name" id="routename" name="routename" [(ngModel)]="feedback.routeName"
+            #routename="ngModel" class="form-control">
+        </div>
+
+        <div class="mb-2 p-2">
+          <input type="number" placeholder="Bus Operator" id="busoperator" name="busoperator"
+            [(ngModel)]="feedback.busoperator" #busoperator="ngModel" class="form-control">
+        </div>
+        <br>
+        <div class="mb-2 p-2">
+          <input type="submit" [disabled]="!frm.valid" value="Submit" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+
+</body>

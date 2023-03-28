@@ -1,0 +1,7 @@
+ul {
+    list-style-type: none;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #33567b;
+}

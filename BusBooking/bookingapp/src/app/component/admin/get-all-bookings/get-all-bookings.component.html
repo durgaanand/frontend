@@ -1,0 +1,37 @@
+
+    
+<div class="container">
+    <br>
+    <h1>
+        List Of Bookings
+    </h1>
+    <br>
+      <table class="table table-bordered">
+         <thead class="thead-light">
+            <tr>
+                <th>Booking Id</th>
+                <th>Username</th>
+                <th>Bus Number</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>No. of Seats</th>
+                <th>Amount Paid</th>
+                <th>Date of Travel</th>
+               <!-- <th colspan="2">Operations</th> -->
+            </tr>
+         </thead>
+            <tr *ngFor="let bkl of bookingList">
+                <td>{{ bkl.bookingId }}</td>
+                <td>{{ bkl.username }}</td>
+                <td>{{ bkl.busNumber }}</td>
+                <td>{{ bkl.source }}</td>
+                <td>{{ bkl.destination }}</td>
+                <td>{{ bkl.numberOfSeats }}</td>
+                <td>{{ bkl.amountPaid }}</td>
+                <td>{{ bkl.datenm }}</td>
+            
+            </tr>
+      </table>
+    
+    
+</div>

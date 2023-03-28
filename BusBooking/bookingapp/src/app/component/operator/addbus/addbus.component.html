@@ -1,0 +1,64 @@
+
+
+<div class="container">
+  <br>
+  <div class="row">
+    <h1 class="text-center">Add Bus details</h1>
+  </div>
+  <div class="row card col-md-6 bg-light">
+    <div class="card-body">
+      <form (ngSubmit)="addBus()">
+
+        <div>
+          <input type="text" placeholder="enter bus number" id="busNumber" name=" busNumber" [(ngModel)]="b.busNumber"
+            class="form-control">
+        </div>
+
+        <div>
+          <input type="number" placeholder="enter routeId " id=" route" name=" routes" [(ngModel)]="b.busRouteId "
+            class="form-control">
+        </div>
+
+        <div>
+          <input type="number" placeholder="enter amount " id=" fare" name=" fare" [(ngModel)]="b.fare  "
+            class="form-control">
+        </div>
+        <div>
+          <input type="number" placeholder="enter seats " id=" seats" name=" seats" [(ngModel)]="b.totalSeats "
+            class="form-control">
+        </div>
+        <br>
+        <div>
+          <input type="submit" value="Add Bus" class="btn btn-success">
+        </div>
+      </form>
+      <br>
+      <div class="row">
+        <table class="table" *ngIf=busFound>
+          <th>
+            Bus booked successfully and here are its details
+          </th>
+            <tbody>
+              <tr>
+                <th scope="row">Bus Number</th>
+                  <td>{{ b.busNumber }}</td>
+               </tr>
+                <tr>
+                    <th scope="row">Bus Route ID</th>
+                    <td>{{ b.busRouteId }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Amount</th>
+                    <td>{{ b.fare }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Number of seats</th>
+                    <td>{{ b.totalSeats }}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+</div>

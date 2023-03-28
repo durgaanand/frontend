@@ -1,0 +1,15 @@
+<h1>DeleteUser</h1>
+<div class="col-md-6">
+  <form   #frm="ngForm" (ngSubmit)="deleteUser()">
+    <!--<div>
+        <input type="text" placeholder="enter username" id="username" name="username" [(ngModel)]="users.username" #username="ngModel" class="form-control" required>
+      </div>
+      <div [hidden]="username.valid || username.pristine">
+        <div class="alert alert-danger" [hidden]="!username.hasError('required')">not empty</div>
+       </div>-->
+       
+       <div>
+        <input type="submit" value="Delete User"  [disabled]="!frm.valid"  class="btn btn-success">
+      </div>
+      </form>
+</div>

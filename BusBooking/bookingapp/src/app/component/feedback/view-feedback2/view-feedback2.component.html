@@ -1,0 +1,46 @@
+
+
+<body>
+  <div class="row">
+    
+    <div class="row card col-md-6 m-4 bg-light">
+      <div class="card-body">
+        <h2 class="text-center">Enter route name</h2>
+        <form #frm="ngForm" (ngSubmit)="viewfeedback()">
+          <div class="mb-1 p-1">
+            <input type="text" placeholder="Route Name" id="routeName" name="routeName" [(ngModel)]="routename"
+              #routeName="ngModel" class="form-control" required>
+          </div>
+          <br>
+          <div>
+            <input type="submit" [disabled]="!frm.valid" value="Submit" class="btn btn-primary">
+          </div>
+        </form>
+
+        <br>
+      <table class="table" *ngIf=feedbackFound>
+        <h3>
+          Feedback Info
+        </h3>
+        <tr>
+          <th>Username</th>
+          <th>Busoperator Id</th>
+          <th>Rating</th>
+          <th>Comments</th>
+        </tr>
+        <tr *ngFor="let data of feedback">
+          <td>{{ data.username }}</td>
+          <td>{{ data.routeName }}</td>
+          <td>{{ data.ratings }}</td>
+          <td>{{ data.comments }}</td>
+
+        </tr>
+      </table>
+
+      <div class="alert alert-danger" role="alert" *ngIf=feedbackNotFound>
+        No Feedback
+      </div>
+    </div>
+    </div>
+  </div>
+</body>

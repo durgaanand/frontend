@@ -1,0 +1,7 @@
+.card{
+    margin-left: 20rem;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #33567b;
+}

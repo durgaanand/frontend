@@ -1,0 +1,62 @@
+
+<div class="container">
+  <br>
+  <div class="row">
+    <h1 class="text-center">Add Bus Route Details</h1>
+  </div>
+  <div class="row card col-md-12 bg-light">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <form (ngSubmit)="addbusroute()">
+    
+    
+            <div>
+              <input type="text" placeholder="enter bus route name " id=" routename" name=" routename"
+                [(ngModel)]="br.routeName  " class="form-control">
+            </div>
+            <div>
+              <input type="text" placeholder="enter source " id=" source" name=" source" [(ngModel)]="br.source "
+                class="form-control">
+            </div>
+            <div>
+              <input type="text" placeholder="enter destination " id=" destination" name=" destination"
+                [(ngModel)]="br.destination " class="form-control">
+            </div>
+            <br>
+            <div>
+              <input type="submit" value="Add Bus route" class="btn btn-success">
+            </div>
+          </form>
+          </div>
+          <br>
+          <div class="col-md-8">
+            <div class="row">
+              <table class="table" *ngIf=busRouteFound>
+                <th>
+                  Bus route booked successfully and here are its details
+                </th>
+                <tbody>
+                  <tr>
+                    <th scope="row">Bus Route</th>
+                    <td>{{ br.routeName }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Source</th>
+                    <td>{{ br.source }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Destination</th>
+                    <td>{{ br.destination }}</td>
+                  </tr>
+      
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+      
+     
+    </div>
+  </div>
+</div>

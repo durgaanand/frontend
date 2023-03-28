@@ -1,0 +1,67 @@
+<body>
+
+    <div class="container">
+      <br>
+      <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="/userhome/addpassenger" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="/userhome/addpassenger">1</a></li>
+            <li class="page-item"><a class="page-link" href="/userhome/addnewbooking">2</a></li>
+            <li class="page-item">
+              <a class="page-link" href="/userhome/addnewbooking">Next</a>
+            </li>
+          </ul>
+        </nav>
+        <br>
+      <div class="row">
+        <h1 class="text-center">Add Passenger details</h1>
+      </div>
+      <div class="row card col-md-6 bg-light">
+        <div class="card-body">
+  
+          <form (ngSubmit)="addPassenger()">
+  
+            <div class="mb-2">
+              <input type="text" placeholder="enter name" id="username" name="username" [(ngModel)]="pkl.username"
+                class="form-control">
+            </div>
+  
+            <div class="mb-2">
+              <input type="text" placeholder="enter first name" id="firstName" name="firstName" [(ngModel)]="pkl.firstName"
+                class="form-control">
+            </div>
+  
+            <div class="mb-2">
+              <input type="text" placeholder="enter last name" id="lastName" name="lastName" [(ngModel)]="pkl.lastName"
+                class="form-control">
+            </div>
+            <div class="mb-2">
+              <input type="number" placeholder="enter phone number" id="phoneNumber" name="phoneNumber"
+                [(ngModel)]="pkl.phoneNumber" class="form-control">
+            </div>
+            <div class="mb-2">
+              <input type="text" placeholder="enter email" id="email" name="email"
+                [(ngModel)]="pkl.email" class="form-control">
+            </div>
+            <div class="mb-2">
+              <input type="number" placeholder="enter identity doc number" id="identityDocNumber" name="identityDocNumber"
+                [(ngModel)]="pkl.identityDocNumber" class="form-control">
+            </div>
+            <div class="mb-2">
+              <input type="text" placeholder="enter identity document name" id="identityDocumentName" name="identityDocumentName" [(ngModel)]="pkl.identityDocumentName"
+                class="form-control">
+            </div>
+  
+            <br>
+            <div>
+              <input type="submit" value="Next " class="btn btn-success" (click)="gotoBooking()">
+            </div>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+    
+  </body>
